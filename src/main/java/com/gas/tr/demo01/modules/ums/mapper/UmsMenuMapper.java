@@ -1,0 +1,30 @@
+package com.gas.tr.demo01.modules.ums.mapper;
+
+import com.gas.tr.demo01.modules.ums.model.UmsMenu;
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
+
+/**
+ * <p>
+ * 后台菜单表 Mapper 接口
+ * </p>
+ *
+ * @author gas
+ * @since 2023-08-23
+ */
+@Mapper
+public interface UmsMenuMapper extends BaseMapper<UmsMenu> {
+
+    /**
+     * 根据后台用户ID获取菜单
+     */
+    List<UmsMenu> getMenuList(@Param("adminId") Long adminId);
+    /**
+     * 根据角色ID获取菜单
+     */
+    List<UmsMenu> getMenuListByRoleId(@Param("roleId") Long roleId);
+
+}
