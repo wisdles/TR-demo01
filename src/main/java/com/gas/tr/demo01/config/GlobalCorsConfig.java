@@ -1,6 +1,7 @@
 package com.gas.tr.demo01.config;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
@@ -9,6 +10,7 @@ import org.springframework.web.filter.CorsFilter;
  * 全局跨域配置
  * Created by gas on 2023/08/23.
  */
+@Configuration
 public class GlobalCorsConfig {
     /**
      * 允许跨域调用的过滤器
